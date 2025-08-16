@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style> -->
+
+    <style type="text/tailwindcss">
+
+        @theme{
+            --animate-type:type 4s steps(10) infinite,blink 0.1s step-end infinite;
+
+            @keyframes type {
+
+                0%{
+                    width: 0ch;
+                }
+                60%{
+                    width: 10ch;
+                }
+                100%{
+                    width: 0ch;
+                }
+            }
+
+            @keyframes blink {
+                0%,100%{
+                    border-right: transparent;
+                }
+                50%{
+                    border-right:2px solid white;
+                }
+            }
+        }
+
+
+    </style>
 
 </head>
 <body class="h-[100vh]">
@@ -13,7 +51,7 @@
     <div class="flex">
         <div class="h-[100vh] w-1/5 bg-black">
 
-            <div class="h-[210px] w-full">
+            <div class="h-[210px] w-full mt-[20px]">
 
                 <div class="flex flex-col gap-2">
 
@@ -120,7 +158,16 @@
             </div>
         </div>
 
-        <div class="h-[100vh] w-4/5 bg-yellow-500">
+        <div class="size-full w-4/5 overflow-y-scroll">
+
+
+            <div class="p-5 h-[100vh] bg-[url('https://i0.wp.com/picjumbo.com/wp-content/uploads/red-and-blue-pillars-wallpaper-abstract-background-free-image.jpeg?w=600&quality=80')] bg-cover flex flex-col justify-center gap-4">
+
+                <h1 class="text-6xl text-white">Mandava Ganesh</h1>
+
+                <h1 class="text-2xl text-white flex gap-3">I'm  <span class="typing decoration-solid underline decoration-blue-400 decoration-[2px] inline-block overflow-hidden br-[2px] animate-type">Developer </span></h1>
+            </div>
+    
 
         </div>
     </div>
