@@ -34,3 +34,11 @@
         border-right:2px solid white;
     }
 } */
+
+
+
+@font-face {
+  font-display: block;
+  font-family: "bootstrap-icons";
+  src: url("./assets/bootstrap-icons.woff2") format(woff2);
+}
